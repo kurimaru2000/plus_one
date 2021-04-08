@@ -1,0 +1,8 @@
+新規ルーム作成ページ
+<%= form_with(model: [@book, @room], local: true) do |f| %>
+
+        <%= f.text_field :name, class: 'chat__room_name chat-room-form__input', placeholder: 'チャットルーム名を入力してください'%>
+        <%= f.text_field :capacity, class: 'chat__room_name chat-room-form__input', placeholder: 'ルーム内希望人数を入力して下さい'%>
+        <%= f.text_field :goal, class: 'chat__room_name chat-room-form__input', placeholder: 'このルームの目標を入力して下さい'%>
+        <%= f.submit "ルームを作る", class: 'chat-room-form__action-btn'%>
+  <% end %>
