@@ -1,1 +1,22 @@
-トップページ
+<%= render "shared/header" %>
+<div class='main'>
+<p>サインイン</p>
+サインアウト
+新規登録
+ルーム一覧
+その他の本一覧
+新規投稿
+<%= link_to(new_book_path, class: 'purchase-btn') do %>
+  <span class='purchase-btn-text'>投稿する</span>
+<% end %>
+
+ <% @books.each do |book| %>
+    <%= link_to image_tag(book.image, class: "item-img"), book_path(book.id), method: :get %>
+ <% end%>
+
+  <% @rooms.each do |room| %>
+    <%= link_to "room一覧", book_room_path(room.book_id, room.id), method: :get %>
+ <% end%>
+
+
+

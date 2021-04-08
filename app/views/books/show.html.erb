@@ -1,0 +1,19 @@
+  <div class="item-img-content">
+      <%= image_tag(@book.image, class:"item-box-img") %>
+      <%= @book.title %>
+      <%= @book.author%>
+      <%= @book.publishing_company %>
+      <%= @book.explanation %>
+
+      <%= link_to(root_path, class: 'purchase-btn') do %>
+  <span class='purchase-btn-text'>トップページに戻る</span>
+<% end %>
+      <%= link_to(edit_book_path, class: 'purchase-btn') do %>
+  <span class='purchase-btn-text'>編集する</span>
+<% end %>
+      <%= link_to(book_path, method: :delete, class: 'purchase-btn') do %>
+  <span class='purchase-btn-text'>削除する</span>
+<% end %>
+	
+<%= link_to 'ルームを作成する', new_book_room_path(@book.id), method: :get %>
+
