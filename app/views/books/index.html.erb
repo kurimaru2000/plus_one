@@ -15,7 +15,7 @@
  <% end%>
 
   <% @rooms.each do |room| %>
-    <%= link_to "room一覧", book_room_path(room.book_id, room.id), method: :get %>
+    <%= link_to room.name, book_room_path(room.book_id, room.id), method: :get %>
  <% end%>
 
 

@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   root to: "books#index"
  
   resources :books do
-    resources :rooms
+    resources :rooms do
+      resources :messages
+    end 
   end
-  resources :comments
 
 
 end
