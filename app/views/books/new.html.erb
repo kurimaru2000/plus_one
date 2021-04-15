@@ -1,13 +1,14 @@
-投稿ページ
-<%= link_to(root_path, class: 'purchase-btn') do %>
-  <span class='purchase-btn-text'>トップページに戻る</span>
-<% end %>
-
+ <%= render "shared/header" %>
+<div class='book-new-all'>
+<div class='book-new-form'>
+<p class="goal-book">
+習慣にしたい本の概要を投稿してください
+</p>
    <%= form_with model:@book, local: true do |f| %>
    <div class="img-upload">
       <div class="click-upload">
-        <p> 
-        クリックしてファイルをアップロード
+        <p class="jpg"> 
+        本の表紙を投稿してください。（形式はjpgでお願いします）
         </p>
         <%= f.file_field :image, id:"item-image" %>
       </div>
@@ -15,8 +16,10 @@
  <%= f.text_field :title, class:"book_text", id:"book_title", placeholder:"本のタイトルを入力してください。" %>
  <%= f.text_field :author, class:"book_text", id:"book_author", placeholder:"本の著者を入力してください。" %>
  <%= f.text_field :publishing_company, class:"book_text", id:"book_publishing_company", placeholder:"本の出版社を入力してください。" %>
- <%= f.text_area :explanation, class:"book_text", id:"book_exp", placeholder:"本の説明を入力してください。" %>
-
+ <%= f.text_area :explanation, class:"book_area", id:"book_exp", placeholder:"本の説明を入力してください。" %>
  <%= f.submit "投稿する" ,class:"sell-btn" %> 
-
     <% end %>
+    </div>
+    </div>
+
+  <%= render "shared/footer" %>

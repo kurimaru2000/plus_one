@@ -87,7 +87,7 @@ width:calc(100vw - 100px);
 .sign-up-all {
   display: flex;
   justify-content: center;
-  background-color: #D8D8D8;
+  background-color: brown;
   height: 370px;
 
 }
@@ -105,7 +105,7 @@ width:calc(100vw - 100px);
 .sign-in-all {
   display: flex;
   justify-content: center;
-  background-color: #D8D8D8;
+  background-color: brown;
   height: 250px;
 
 }
@@ -145,22 +145,10 @@ input[type="password"] {
   border: solid 1px;
   margin-top: 20px;
 }
-
-
-
-
-
-
-
 /* devise */
 
 
 /* top-page-body */
-
-
-
-
-
 .card-list{
   display: flex;
   flex-wrap: wrap;
@@ -189,7 +177,7 @@ input[type="password"] {
 .book-show-main {
   display: flex;
   width: 100vw;
-  background-color: teal;
+  background-color: brown;
   justify-content: center;
   
   
@@ -200,13 +188,13 @@ input[type="password"] {
 }
 
 .book-img{
-  background-color: tomato;
+  background-color: #d6c6af;
   text-align:center
   /* width:calc(100vw - 300px); */
 }
 .book-overview{
   border: 1px double black;
-  background-color: violet;
+  background-color: white;
   
   
 }
@@ -231,7 +219,7 @@ table{
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
- background-color: cornflowerblue;
+ background-color: rgba(54, 187, 114, 0.938);
 }
 
 table tr{
@@ -255,3 +243,147 @@ table td.icon{
   background-repeat: no-repeat;
   padding-left: 30px;
 }
+/* book.new */
+.book-new-all {
+  display: flex;
+  justify-content: center;
+  background-color: brown;
+  height: 420px;
+
+}
+
+.book-new-form {
+  display: block;
+  text-align:center;
+  background-color: white;
+  width: 500px;
+  height: 370px;
+  border: 1px solid white;
+  box-shadow: 2px 2px 2px 2px #bbb; 
+  margin: 10px;
+}
+
+.book_area{
+  width:300px;
+  margin:5px;
+}
+
+.book_text {
+  margin:5px;
+}
+
+.sell-btn{
+  width: 200px;
+  height: 40px;
+  border: solid 1px;
+  
+}
+
+.jpg {
+  font-size: 7px;
+}
+
+.goal-book {
+  border:saddlebrown 2px solid;
+}
+
+/* book.new */
+
+/* room.new */
+.room-new-all {
+  display: flex;
+  justify-content: center;
+  background-color: brown;
+  height: 320px;
+
+}
+
+.room-new-form {
+  display: block;
+  text-align:center;
+  background-color: white;
+  width: 500px;
+  height: 280px;
+  border: 1px solid white;
+  box-shadow: 2px 2px 2px 2px #bbb; 
+  margin: 10px;
+}
+
+.room-title {
+  border:saddlebrown 2px solid;
+}
+
+.chat__room_name {
+  margin:5px;
+}
+
+/* room.new */
+
+/* message.index */
+.message-all {
+display:flex;
+justify-content: center;
+flex-direction: column;
+background-color:	brown;
+width: 100vw;
+}
+
+.room-explanations {
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+
+.room-explanation {
+  
+background-color: brown;
+margin: 0 auto;
+}
+
+.messages {
+  background-color: white;
+  width: 80vw; 
+  height: 400px;
+  border: solid 1px white;
+  overflow: auto;
+  margin: 0 auto;
+  border: black 1px solid;
+  
+}
+
+.message-form {
+  background-color: 	rgba(54, 187, 114, 0.938);
+  width: 80vw;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+
+
+
+
+
+/* message.index */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

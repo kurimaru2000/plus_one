@@ -2,7 +2,7 @@
  <div class='book-show-main'>
    <div class='book-show'>
    <div class= 'book-img'>
-      <%= image_tag(@book.image class:"item-box-img") if @book.image.attached? %>
+      <%= image_tag(@book.image, class:"item-box-img") if @book.image.attached? %>
     </div>
     <div class = book-overview>
    <p> <%= "タイトル:#{@book.title}"%> </p>
