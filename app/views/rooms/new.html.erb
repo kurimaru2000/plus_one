@@ -1,8 +1,18 @@
-新規ルーム作成ページ
+<%= render "shared/header" %>
+<div class='room-new-all'>
+<div class='room-new-form'>
+<p class='room-title'>
+目標を仲間と達成するルームを作成してください
+<p>
 <%= form_with(model: [@book, @room], local: true) do |f| %>
-
         <%= f.text_field :name, class: 'chat__room_name chat-room-form__input', placeholder: 'チャットルーム名を入力してください'%>
-        <%= f.text_field :capacity, class: 'chat__room_name chat-room-form__input', placeholder: 'ルーム内希望人数を入力して下さい'%>
+        <%= f.text_field :capacity, class: 'chat__room_name chat-room-form__input', placeholder: '内希望人数を入力して下さい 例）４'%>
         <%= f.text_field :goal, class: 'chat__room_name chat-room-form__input', placeholder: 'このルームの目標を入力して下さい'%>
-        <%= f.submit "ルームを作る", class: 'chat-room-form__action-btn'%>
+        <div class='room-btn'>
+       <p> <%= f.submit "ルームを作る", class: 'chat-room-form__action-btn'%></p>
+         </div> 
   <% end %>
+</div>
+</div>
+
+ <%= render "shared/footer" %>

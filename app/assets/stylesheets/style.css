@@ -1,0 +1,389 @@
+/* top-page-header */
+header{ 
+  height:100px;
+  width: 100%;
+  background-color: white;
+  display: flex; 
+  /* justify-content: flex-end; */
+
+}
+
+.link {
+  color: black;
+  text-decoration: none;
+
+}
+
+.title{
+  background-color:white; 
+  display: flex; 
+  height: 100px;
+  width:250px;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  font-size: large;
+  color: pink;
+}
+
+.title-link{
+  color: black;
+  text-decoration: none;
+}
+
+.lists {
+  background-color: white;
+  display: flex;
+  width:calc(100vw - 300px);
+  justify-content: flex-end;
+
+}
+
+.list{
+  list-style: none;
+  background-color: white;
+  align-items: center;
+  display: flex; 
+  width: calc(100vw - 60vw);
+  height: 100px;
+  justify-content: space-around;
+  margin: 5px;
+  margin-top: 0px;
+}
+.login-list {
+  list-style: none;
+  background-color: white;
+  justify-content: space-around;
+  align-items: center;
+  display: flex; 
+  width: 15vw;
+  height: 100px;
+  margin-top: 0px;
+
+}
+
+/* top-page-header */
+
+/* footer */
+.footer-img{
+display: flex;
+justify-content: space-between;
+margin-left: 50px ;
+margin-right: 50px ;
+background-color: white;
+width:calc(100vw - 100px);
+
+
+
+}
+
+.obn-img{
+  width: 200px;
+  height: 200px;
+}
+
+
+/* devise */
+.sign-up-all {
+  display: flex;
+  justify-content: center;
+  background-color: brown;
+  height: 370px;
+
+}
+
+.sign-up-form {
+  background-color: white;
+  width: 500px;
+  height: 320px;
+  text-align:center;
+  border: 1px solid white;
+  box-shadow: 2px 2px 2px 2px #bbb; 
+  margin-top: 10px;
+}
+
+.sign-in-all {
+  display: flex;
+  justify-content: center;
+  background-color: brown;
+  height: 250px;
+
+}
+
+.sign-in-form {
+  background-color: white;
+  width: 500px;
+  height: 200px;
+  text-align:center;
+  border: 1px solid white;
+  box-shadow: 2px 2px 2px 2px #bbb; 
+  margin-top: 10px;
+}
+
+.sign-title {
+  display: block;
+}
+
+input[type="text"] {
+  width: 250px;
+  height: 30px;
+}
+
+input[type="email"] {
+  width: 250px;
+  height: 30px;
+}
+
+input[type="password"] {
+  width: 250px;
+  height: 30px;
+}
+
+.sign-btn {
+  width: 200px;
+  height: 40px;
+  border: solid 1px;
+  margin-top: 20px;
+}
+/* devise */
+
+
+/* top-page-body */
+.card-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  min-height: calc(100vh - 161px);
+  margin:30px;
+  background-color: brown;
+}
+.card-element{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  
+} 
+.card{
+  width: calc((100% - 50px) / 3);
+  margin-bottom: 10px;
+  padding-top: 40px;
+}
+
+/* top-page-body */
+/* show-page-body */
+
+.book-show-main {
+  display: flex;
+  width: 100vw;
+  background-color: brown;
+  justify-content: center;
+  
+  
+}
+
+.book-show{
+  
+}
+
+.book-img{
+  background-color: #d6c6af;
+  text-align:center
+  /* width:calc(100vw - 300px); */
+}
+.book-overview{
+  border: 1px double black;
+  background-color: white;
+  
+  
+}
+
+/* show */
+.room-all{
+  background-color: white;
+}
+
+.show-room{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  min-height: calc(100vh - 161px);
+  background-color: white;
+}
+
+
+
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+ background-color: rgba(54, 187, 114, 0.938);
+}
+
+table tr{
+  border-bottom: solid 1px #eee;
+  cursor: pointer;
+}
+
+table tr:hover{
+  background-color: #d4f0fd;
+}
+
+table th,table td{
+  text-align: center;
+  width: 25%;
+  padding: 15px 0;
+}
+
+table td.icon{
+  background-size: 35px;
+  background-position: left 5px center;
+  background-repeat: no-repeat;
+  padding-left: 30px;
+}
+/* book.new */
+.book-new-all {
+  display: flex;
+  justify-content: center;
+  background-color: brown;
+  height: 420px;
+
+}
+
+.book-new-form {
+  display: block;
+  text-align:center;
+  background-color: white;
+  width: 500px;
+  height: 370px;
+  border: 1px solid white;
+  box-shadow: 2px 2px 2px 2px #bbb; 
+  margin: 10px;
+}
+
+.book_area{
+  width:300px;
+  margin:5px;
+}
+
+.book_text {
+  margin:5px;
+}
+
+.sell-btn{
+  width: 200px;
+  height: 40px;
+  border: solid 1px;
+  
+}
+
+.jpg {
+  font-size: 7px;
+}
+
+.goal-book {
+  border:saddlebrown 2px solid;
+}
+
+/* book.new */
+
+/* room.new */
+.room-new-all {
+  display: flex;
+  justify-content: center;
+  background-color: brown;
+  height: 320px;
+
+}
+
+.room-new-form {
+  display: block;
+  text-align:center;
+  background-color: white;
+  width: 500px;
+  height: 280px;
+  border: 1px solid white;
+  box-shadow: 2px 2px 2px 2px #bbb; 
+  margin: 10px;
+}
+
+.room-title {
+  border:saddlebrown 2px solid;
+}
+
+.chat__room_name {
+  margin:5px;
+}
+
+/* room.new */
+
+/* message.index */
+.message-all {
+display:flex;
+justify-content: center;
+flex-direction: column;
+background-color:	brown;
+width: 100vw;
+}
+
+.room-explanations {
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+
+.room-explanation {
+  
+background-color: brown;
+margin: 0 auto;
+}
+
+.messages {
+  background-color: white;
+  width: 80vw; 
+  height: 400px;
+  border: solid 1px white;
+  overflow: auto;
+  margin: 0 auto;
+  border: black 1px solid;
+  
+}
+
+.message-form {
+  background-color: 	rgba(54, 187, 114, 0.938);
+  width: 80vw;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+
+
+
+
+
+/* message.index */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+ <%= render "shared/header" %>
+<div class='message-all'>
+  <div class='room-explanations'>
+  <div class='room-explanation'>
+  <%= "ルーム名：#{@room.name}" %>
+  <%= "ルーム目標：#{@room.goal}" %>
+  </div>
+  </div>
+
+ <div class='messages'>
+<%= render partial: 'message', collection: @messages %>
+ </div>
+ <div class='message-form'>
+<%= form_with model: @message, url:"/books/#{@room.book_id}/rooms/#{@room.id}/messages",local: true do |f| %>
+  <div class="form-input">
+    <%= f.text_field :text, class: 'form-message', placeholder: 'type a message' %>
+    
+    <label class="form-image">
+      <span class="image-file">画像</span>
+      <%= f.file_field :image, class: 'hidden' %>
+    </label>
+  </div>
+  <%= f.submit '送信', class: 'form-submit' %>
+<% end %>
+</div>
+</div>
+ <%# <%= render "shared/footer" %> 

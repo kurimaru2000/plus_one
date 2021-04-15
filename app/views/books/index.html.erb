@@ -1,22 +1,38 @@
 <%= render "shared/header" %>
 <div class='main'>
-<p>サインイン</p>
-サインアウト
-新規登録
-ルーム一覧
-その他の本一覧
-新規投稿
-<%= link_to(new_book_path, class: 'purchase-btn') do %>
-  <span class='purchase-btn-text'>投稿する</span>
-<% end %>
-
+ <div class = "card-list">
  <% @books.each do |book| %>
-    <%= link_to image_tag(book.image, class: "item-img"), book_path(book.id), method: :get %>
+ <div class="card">
+   <div class="card-element">
+    <%= link_to image_tag(book.image.variant(resize: '300x300'), class: "item-img"), book_path(book.id), method: :get if book.image.attached? %>
+    <%= link_to book.title, book_path(book.id), method: :get, class: "card__title link" %>
+    </div>
+ </div>
  <% end%>
+ </div>
+最新のルーム
+  <table>
+  <tr>
+    <th>元の本</th>
+    <th>ルーム名</th>
+    <th>希望人数</th>
+    <th>ルームの目標</th>
+  </tr>
+ <% @rooms.each do |room| %>
+  <tr>
+    <td><%= Book.find(room.book_id).title %></td>
+    <td ><%= link_to room.name, "books/#{room.book_id}/rooms/#{room.id}/messages" %></td>
+    <td><%= room.capacity %></td>
+    <td><%=room.goal%></td>
+  </tr>
+ <% end%>
+</table>
 
-  <% @rooms.each do |room| %>
-    <%= link_to "room一覧", book_room_path(room.book_id, room.id), method: :get %>
- <% end%>
+ <%= render "shared/footer" %>
+ 
+
+
+ 
 
 
 

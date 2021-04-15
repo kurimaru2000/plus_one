@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :messages
   has_many :room_users
   has_many :messages
-  
+
   with_options presence: true do
     validates :nickname
   end
