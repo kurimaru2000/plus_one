@@ -1,13 +1,17 @@
-  <div class="item-img-content">
-      <%= image_tag(@book.image, class:"item-box-img") %>
-      <%= @book.title %>
-      <%= @book.author%>
-      <%= @book.publishing_company %>
-      <%= @book.explanation %>
-
-      <%= link_to(root_path, class: 'purchase-btn') do %>
-  <span class='purchase-btn-text'>トップページに戻る</span>
-<% end %>
+ <%= render "shared/header" %>
+ <div class='book-show-main'>
+   <div class='book-show'>
+   <div class= 'book-img'>
+      <%= image_tag(@book.image class:"item-box-img") if @book.image.attached? %>
+    </div>
+    <div class = book-overview>
+   <p> <%= "タイトル:#{@book.title}"%> </p>
+      <p><%= "著者:#{@book.author}"%></p>
+     <p> <%= "出版社:#{@book.publishing_company}" %></p>
+    <p> <%= "本の説明:#{@book.explanation}" %></p>
+   </div>
+   </div>
+</div>
       <%= link_to(edit_book_path, class: 'purchase-btn') do %>
   <span class='purchase-btn-text'>編集する</span>
 <% end %>
@@ -16,4 +20,25 @@
 <% end %>
 	
 <%= link_to 'ルームを作成する', new_book_room_path(@book.id), method: :get %>
+<p>この本のルーム一覧</p>
+<div class='show-room'>
+<div class="room-all">
+    
+ </div>
 
+ <table>
+  <tr>
+    <th>ルーム名</th>
+    <th>希望人数</th>
+    <th>ルームの目標</th>
+  </tr>
+ <% @rooms.each do |room| %>
+  <tr>
+    <td ><%= link_to room.name, "#{room.book_id}/rooms/#{room.id}/messages" %></td>
+    <td><%= room.capacity %></td>
+    <td><%=room.goal%></td>
+  </tr>
+ <% end%>
+</table>
+
+<%= render "shared/footer" %>

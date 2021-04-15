@@ -1,11 +1,24 @@
-<header class='top-page-header'>
-      <% if user_signed_in? %>
-      <li><%= link_to current_user.nickname, "/users/#{current_user.id}", class: "user-nickname" %></li>
-      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"%> </li>
-      <% else %> 
-      <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-      <% end %>  
-    </ul>
+<header>
+  <div class='title'>
+  <h1><%= link_to "PLUS ONE", root_path, class: 'title-link' %><h1>
   </div>
+
+      <div class='lists'>
+       <ul class='list'>
+        <li><%= link_to 'コンセプト', '#', class: "concept link"%> </li>
+        <li><%= link_to '使い方', '#', class: "use link"%> </li>
+        <li><%= link_to '本一覧', index2_books_path, class: "sign-up link" %></li>
+        <li><%= link_to 'ルーム一覧','#', class: "sign-up link" %></li>
+        <li><%= link_to '本を新規投稿', new_book_path, class: "sign-up link" %></li>
+       </ul>
+       <ul class='login-list'>
+        <% if user_signed_in? %>
+        <li><%= link_to current_user.nickname, "/users/#{current_user.id}", class: "user-nickname link" %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout link"%> </li>
+        <% else %> 
+        <li><%= link_to 'ログイン', new_user_session_path, class: "login link" %></li>
+        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up link" %></li>
+        <% end %>  
+        </ul>
+      </div>
 </header>

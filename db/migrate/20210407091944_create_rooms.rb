@@ -4,7 +4,7 @@ class CreateRooms < ActiveRecord::Migration[6.0]
       t.string  :name, null: false
       t.integer :capacity, null: false
       t.string  :goal, null: false
-      t.references    :book, foreign_key: true
+      t.references :book, foreign_key: true
       t.timestamps
     end
   end
