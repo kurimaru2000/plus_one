@@ -8,13 +8,23 @@ class RoomsController < ApplicationController
   def create
     @book = Book.find_by(id: params[:book_id])
     @room = @book.rooms.new(room_params)
-    Room.create(room_params)
+    if @room.save
     redirect_to root_path
+  else
+    render :new
+  end
   end
 
   def show
     @message = Message.new
     @room = Room.find(params[:id])
+  end
+
+  def destroy
+  
+    @room = Room.find(params[:id])
+    @room.destroy
+    redirect_to root_path
   end
 
   private
@@ -24,6 +34,6 @@ class RoomsController < ApplicationController
   end
 
   def room_find
-    @room = Room.find(params[:id])
+    @room = Room.find(params[:room_id])
   end
 end

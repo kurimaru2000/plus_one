@@ -1,11 +1,13 @@
 class MessagesController < ApplicationController
   def index
     @message = Message.includes(:user).order('created_at DESC')
+    @book = Book.find(params[:book_id])
     @room = Room.find(params[:room_id])
     @messages = @room.messages.includes(:user)
   end
 
-  def new; end
+  def new
+  end
 
   def create
     @book = Book.find(params[:book_id])
@@ -16,8 +18,7 @@ class MessagesController < ApplicationController
     @messages = Message.all
   end
 
-  def show; end
-
+  
   private
 
   def message_params

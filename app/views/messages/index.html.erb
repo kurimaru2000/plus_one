@@ -24,4 +24,8 @@
 <% end %>
 </div>
 </div>
+      <%= link_to "/books/#{@book.id}/rooms/#{@room.id}", method: :delete, class: 'purchase-btn' do %>
+  <span class='purchase-btn-text'>削除する</span>
+<% end %>
  <%# <%= render "shared/footer" %> 
+ 

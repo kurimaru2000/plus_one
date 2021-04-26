@@ -69,3 +69,4 @@ gem 'mini_magick'
 gem 'pry-rails'
 gem 'rubocop'
 gem "aws-sdk-s3", require: false
+gem 'activestorage-validator'
