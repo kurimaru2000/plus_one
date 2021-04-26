@@ -8,7 +8,14 @@ class BooksController < ApplicationController
     # @book_name =Book.find([Room.find(book_id)]).title
   end
 
-  def index2; end
+  def index2
+  end
+
+  def index_concept
+  end
+
+  def index_use
+  end
 
   def new
     @book = Book.new
